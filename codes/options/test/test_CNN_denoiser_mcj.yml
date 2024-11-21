@@ -1,0 +1,39 @@
+name: Test_CNN_denoiser
+suffix: ~  # add suffix to saved images
+model: Unet
+crop_border: ~  # crop border when evaluation. If None(~), crop the scale pixels
+gpu_ids: [0]
+self_ensemble: True
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: SIDD
+    mode: LQGTRN
+    dataroot_Noisy: 'D:\mengdeyu\datasets\SIDD validation and testing\SIDD Benchmark Data' # path to test Noisy images
+  test_2:  # the 2nd test dataset
+    name: DND
+    mode: LQGTRN
+    dataroot_Noisy: '' # path to test Noisy images
+
+#### network structures
+CNN:
+  in_nc: 1
+  out_nc: 1
+  init: xavier
+
+#### model generator structures
+network_G:
+  which_model_G:
+      subnet_type: Resnet
+  in_nc: 1
+  out_nc: 1
+  block_num: [8, 8]
+  scale: 4
+  init: xavier
+
+
+#### path
+path:
+  pretrain_model_G:
+
+#'/home/shendi_mcj/code/InvDN-mcj/pretrained/XJ_32/8.0_G.pth'
