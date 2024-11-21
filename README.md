@@ -33,9 +33,9 @@ Signal-to-noise decoupling and fake-noise generation using trained INN, using th
 ```bash
 python test-***.py 
 ```
-For Signal-to-noise decoupling, use test-SEGY-***.py, and the function ***_test(model, opt)
+For Signal-to-noise decoupling, use test-SEGY-***.py, and the function ***\_test(model, opt)
 For the calculation of AKLD, use test-SEGY-***.py, and the function AKLD(model, opt)
-For the generation, analysis, storage, and visualization of fake-noisy data use test_generate_***.py, 
+For the generation, analysis, storage, and visualization of fake-noisy data use test_generate\_***.py, 
 then, the reader uncomments the required functions as needed, e.g., generate_aug_dataset(model, opt)
 
 ## Downstream applications
