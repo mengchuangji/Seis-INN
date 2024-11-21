@@ -12,7 +12,7 @@ We present six model types: 'InvDN','InvDN_C','Unet','Unet_aug','DnCNN','DnCNN_a
 The symbol after the underscore indicates that the model class incorporates the trained INN, which can generate samples online for data augmentation and 
 train together with the original paired data. Similarly, readers can refer to and write class files for other networks.
 
-Paired noisy-clean datasets can be obtained by expert annotation or other annotation methods (such as [fxdecon+orth](https://github.com/mengchuangji/SRNGF/tree/main/seispro/localortho) in the paper).
+Paired noisy-clean datasets can be obtained by expert annotation or other annotation methods (such as [fxdecon+ Local Orthogonalization](https://github.com/mengchuangji/SRNGF/tree/main/seispro/localortho) in the paper).
 Please refer to [this repo](https://github.com/mengchuangji/SRNGF/tree/main/seispro/localortho) for how to write paired datasets into hdf5 files. Of course, readers can customize dalaloader for any file format.
 
 ## Training, 
@@ -22,7 +22,7 @@ This is an example of schematic diagram of the training of INN for signal-noise 
 
 Prepare a small paired dataset (target dataset) for training, model type is 'InvDN', obtain a trained INN.
 ```bash
-python train-mian.py 
+python train-***.py 
 ```
 
 ## Generation 
