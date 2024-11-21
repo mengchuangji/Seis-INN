@@ -8,7 +8,7 @@ by Chuangji Meng, Jinghuai Gao, Yajun Tian, Zhen Li.
 Training and testing codes are in ['codes/'](./codes/). Please see ['codes/README.md'](./codes/README.md) for basic usages.
 The model configuration file is in the options folder and ends with .yml, e.g., 'options/train/train_InvDN-mcj.yml'
 
-We present six model types: 'InvDN','InvDN_C','Unet','Unet_aug','DnCNN','DnCNN_aug', see 'models/__init__.py'
+We present six model types: 'InvDN','InvDN_C','Unet','Unet_aug','DnCNN','DnCNN_aug', see 'models/_init_.py'
 The symbol after the underscore indicates that the model class incorporates the trained INN, which can generate samples online for data augmentation and 
 train together with the original paired data. Similarly, readers can refer to and write class files for other networks.
 
